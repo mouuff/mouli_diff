@@ -2,5 +2,5 @@
 
 for file in bsqs/*
 do
-    ./$file
+    ./$file tests/test_40 > $file diff
 done
