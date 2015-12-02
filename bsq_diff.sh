@@ -20,7 +20,18 @@ do
     let "a = a + 1"
 done
 
+tmp=
+dff="diff_file"
+
 for res in res/*
 do
-    echo $res
+    if [ "$tmp" != "" ]
+    then
+        diff $res $tmp > $dff
+	if [ -s "$dff" ]
+	then
+	    echo "DIFF $res $tmp"
+	fi
+    fi
+    tmp=$res
 done
