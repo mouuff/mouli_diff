@@ -2,7 +2,7 @@
 
 let "a = 0"
 
-s = "_"
+s="_"
 
 for bsq in bsqs/*
 do
