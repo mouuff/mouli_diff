@@ -15,7 +15,7 @@ mkdir res
 
 for bsq in bsqs/*
 do
-    ./$bsq {$1} > $bsq$s$a
+    ./$bsq $1 > $bsq$s$a
     mv $bsq$s$a res/
     let "a = a + 1"
 done
