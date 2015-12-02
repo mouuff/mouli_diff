@@ -3,6 +3,8 @@
 let "a = 0"
 
 s="_"
+RED='\033[0;31m'
+NC='\033[0m'
 
 if [ -z "$1" ]
 then
@@ -27,10 +29,11 @@ for res in res/*
 do
     if [ "$tmp" != "" ]
     then
+	echo "TESTING: $res $tmp"
         diff $res $tmp > $dff
 	if [ -s "$dff" ]
 	then
-	    echo "DIFF $res $tmp"
+	    echo -e "${RED}DIFF $res $tmp${NC}"
 	fi
     fi
     tmp=$res
