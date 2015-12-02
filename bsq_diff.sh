@@ -34,7 +34,10 @@ do
 	if [ -s "$dff" ]
 	then
 	    echo -e "${RED}DIFF $res $tmp${NC}"
+	    cat $dff >> diff
 	fi
     fi
     tmp=$res
 done
+
+rm $dff
