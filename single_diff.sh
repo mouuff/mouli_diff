@@ -16,10 +16,10 @@ fi
 rm -rf res
 mkdir res
 
-for bsq in bsqs/*
+for exec_ in execs/*
 do
-    ./$bsq $1 > $bsq$s$a
-    mv $bsq$s$a res/
+    ./$exec_ $1 > $exec_$s$a
+    mv $exec_$s$a res/
     let "a = a + 1"
 done
 
